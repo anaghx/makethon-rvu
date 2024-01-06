@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anagha M Nair's Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://wallpapers.com/images/hd/abstract-geometric-gradient-rzabub7yvmx1ufau.jpg') center/cover no-repeat fixed;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background: linear-gradient(to right, #7a7a7b, #383737);
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 8px 15px;
+      margin: 0 5px;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #540548; /* Darker blue on hover */
+    }
+
+    section {
+      display: flex;
+      align-items: center; /* Center content vertically */
+      max-width: 950px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: rgba(91, 89, 89, 0.4);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    h1{
+      margin-bottom: 15px;
+      font-size: 50px;
+    }
+    h2{
+      margin-bottom: 15px;
+      
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 3px;
+      margin-right: 30px;
+    }
+
+    .about-content {
+      flex: 1;
+      text-align: justify; /* Adjust text alignment */
+    }
+
+    table {
+      width: 80%;
+      height: 400px;
+    }
+
+    th {
+      border: 4px solid white;
+      padding: 10px;
+      text-align: center; 
+    }
+
+
+    td{
+      border: 2px solid white;
+      padding: 10px;
+      text-align: center; 
+    }
+    form {
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+
+    .contact-details {
+      margin-top: 20px;
+    }
+
+    .active {
+      background-color: #540548;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anagha M Nair</h1>
+    <nav>
+      <nav id="navbar">
+      <a href="#about">About Me</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <img src="D:\Anagha\photos\WhatsApp Image 2024-01-05 at 21.29.04_bfd68b12.jpg" alt="Your Image" height="500" width="380">
+    <div class="about-content">
+      <h2>About Me!</h2>
+      <p>
+        Focused and enthusiastic developer with a keen interest in software development and artificial intelligence. By comprehensive exposure to the underlying concepts and applying them vividly to various projects, my love for these domains came into being. I am a passionate individual who thrives to build and apply algorithms to solve real-world industry problems.
+      </p>
+      <p>Birthday: 24 June 2005</p>
+      <p>Phone: +91 7676831931</p>
+      <p>City: Bengaluru, Karnataka</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>&nbsp;&nbsp;&nbsp;
+    <img src="D:\Anagha\photos\Screenshot 2024-01-06 030559.png" height="60" width="800">
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>&nbsp;&nbsp;&nbsp;
+    <table>
+      <tr>
+        <th>Education</th>
+        <th>Institution</th>
+        <th>Passed out</th>
+      </tr>
+      <tr>
+        <td>B.Tech(Hons)</td>
+        <td>RV University</td>
+        <td>Expected graduation: May 2027</td>
+      </tr>
+      <tr>
+        <td>12th</td>
+        <td>Narayana PU College</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>10th</td>
+        <td>Indian Public School</td>
+        <td>2021</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>&nbsp;&nbsp;&nbsp;
+    <p>Intern at XYZ Company, Summer 2023</p>
+    <p>Assistant at ABC Organization, 2022-2023</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="email" name="email" placeholder="Your Email" margin-right: 20px;> &nbsp;&nbsp;&nbsp;
+      <textarea name="queries" placeholder="Your Queries"></textarea>
+    </form>
+    <div class="contact-details">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      <p>Phone: +91 7676831931</p>&nbsp;&nbsp;&nbsp;
+      <button class="linkedin-button" onclick="window.open('https://www.linkedin.com/in/anagha-m-nair-4204182a2/', '_blank')">LinkedIn</button>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navbar = document.getElementById("navbar");
+  
+      navbar.addEventListener("click", function (event) {
+        if (event.target.tagName === "A") {
+          event.preventDefault();
+  
+          const targetId = event.target.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+  
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  </script>
+ 
+</body>
+</html>
+
